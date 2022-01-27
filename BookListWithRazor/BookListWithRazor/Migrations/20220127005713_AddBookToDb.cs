@@ -4,6 +4,9 @@
 
 //use add-migration AddBookToDb, this will create this script to create the database
 //use update-database, this will run the script in database. It worked
+// I had created the DB wrog, column Author must be String, but it was int. Didnt make any change in this file, but in data base 
+//Alter table dbo.Books alter column Author string NOT NULL
+
 namespace BookListWithRazor.Migrations
 {
     public partial class AddBookToDb : Migration
@@ -17,7 +20,7 @@ namespace BookListWithRazor.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Author = table.Column<int>(type: "int", nullable: false)
+                    Author = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

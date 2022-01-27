@@ -7,6 +7,44 @@
         <h2 class="text-info">Book List</h2>
     </div>
     <div class="col-3">
-        <a class="btn-primary btn-ifo form-control text-white">Create New Book</a>
+        <a class="btn-primary btn-info form-control text-white">Create New Book</a>
+    </div>
+
+
+    <div class="col-12 border p-3 mt-3">
+        <form method-"post">
+            @if(Model.Books.Count() > 0)
+            {
+                <table class = "table table striped border">
+                    <tr class="Table-secondary">
+                        <th>
+                             <label asp-for="Books.FirstOrDefault().Name"></label> @*This is a tag helper*@
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(m=>m.Books.FirstOrDefault().Author) @*this is a html tag helper, do the same as above, but in thml format*@
+                        </th>
+                        <th>
+
+                        </th>
+                    </tr>
+                    @foreach(var item in Model.Books)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(m=>item.Name) @*doenst hav a tag helper for a for-loop *@
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m=>item.Author) @*doenst hav a tag helper for a for-loop *@
+                            </td>
+                        </tr>
+
+                    }
+                </table>
+            }
+            else
+            {
+                <p>No books available</p>
+            }
+        </form>
     </div>
 </div>
