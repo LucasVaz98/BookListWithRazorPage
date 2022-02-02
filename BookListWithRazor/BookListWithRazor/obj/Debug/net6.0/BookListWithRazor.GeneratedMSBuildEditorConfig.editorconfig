@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\vazde\Documents\myRepo\Desafio C#\booklist-razor\BookListWithRazor\BookListWithRazor
 build_property._RazorSourceGeneratorDebug = 
 
+[c:/Users/vazde/Documents/myRepo/Desafio C\#/booklist-razor/BookListWithRazor/BookListWithRazor/Pages/BookList/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va0xpc3RcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [c:/Users/vazde/Documents/myRepo/Desafio C\#/booklist-razor/BookListWithRazor/BookListWithRazor/Pages/BookList/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va0xpc3RcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

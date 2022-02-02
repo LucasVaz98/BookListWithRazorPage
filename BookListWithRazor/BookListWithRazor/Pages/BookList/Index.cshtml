@@ -7,7 +7,7 @@
         <h2 class="text-info">Book List</h2>
     </div>
     <div class="col-3">
-        <a class="btn-primary btn-info form-control text-white">Create New Book</a>
+        <a asp-page="Create" class="btn-primary btn-info form-control text-white">Create New Book</a>
     </div>
 
 
@@ -24,6 +24,9 @@
                             @Html.DisplayNameFor(m=>m.Books.FirstOrDefault().Author) @*this is a html tag helper, do the same as above, but in thml format*@
                         </th>
                         <th>
+                             <label asp-for="Books.FirstOrDefault().ISBN"></label> @*This is a tag helper*@
+                        </th>
+                        <th>
 
                         </th>
                     </tr>
@@ -35,6 +38,13 @@
                             </td>
                             <td>
                                 @Html.DisplayFor(m=>item.Author) @*doenst hav a tag helper for a for-loop *@
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m=>item.ISBN) @*doenst hav a tag helper for a for-loop *@
+                            </td>
+                            <td>
+                                <button class="btn btn-danger btn-sm text-white">Delete</button> 
+                                <a class="btn btn-success btn-sm text-white">Edit</a>
                             </td>
                         </tr>
 
